@@ -94,14 +94,19 @@ a:hover {
   font-size: 12px;
   }
 
+  .field {
+    width: 100%;
+  }
+
   label {
     display:block;
+    margin-bottom: 1em;
   }
 
   input {
     display: block;
     width: 100%;
-    margin: auto;
+    margin: 0.5em auto;
   }
 
   pre {
