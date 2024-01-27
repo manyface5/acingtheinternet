@@ -111,6 +111,10 @@ a:hover {
     margin: 0.5em auto;
   }
 
+  #submit {
+    width: 100%;
+  }
+
   pre {
     width: 100%;
     overflow: auto;
