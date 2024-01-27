@@ -94,6 +94,10 @@ a:hover {
   font-size: 12px;
   }
 
+  form {
+    width: 100%;
+  }
+
   .field {
     width: 100%;
   }
