@@ -6,14 +6,14 @@ layout: html
 <p><strong>Applications to join are currently closed so I can catch up on reviewing existing applications! Any requests to join during the time that applications are closed will be refused. In a week or two, they'll open back up, so please wait until then. The form is being left up so that existing webring members may edit their information.</strong></p>
 <h2>Criteria to join</h2>
 <ul>
-<li>You must be asexual (identities under the asexual spectrum count).</li>
-<li>You must have a personal site where you can put the webring widget, does not have to be hosted on Neocities.</li>
-<li>If your site contains any NSFW content, it must be clearly marked as 18+.</li>
-<li>Your site must not have any hate speech or bigotry.</li>
-<li>Bigotry here includes generalized/blanket statements or rants about marginalized identities, even those you may belong to yourself, that would make someone of that identity potentially uncomfortable to see.</li>
-<li>Your site cannot be advertisement-focused (having a page/section with your social media links is fine and mentioning that you're, for example, an artist who takes commissions is fine, but the sole purpose of the website should not be advertisement).</li>
-<li>You must add the webring widget somewhere on either a homepage or a webrings page. If I notice the webring widget is removed, I may remove you from the webring and send you an email to notify you of the issue.</li>
-<li>I strongly encourage visiting your fellow webring members' pages, leaving comments, and interacting with each other!</li>
+  <li>You must be asexual (identities under the asexual spectrum count).</li>
+  <li>You must have a personal site where you can put the webring widget, does not have to be hosted on Neocities.</li>
+  <li>If your site contains any NSFW content, it must be clearly marked as 18+.</li>
+  <li>Your site must not have any hate speech or bigotry.</li>
+  <li>Bigotry here includes generalized/blanket statements or rants about marginalized identities, even those you may belong to yourself, that would make someone of that identity potentially uncomfortable to see.</li>
+  <li>Your site cannot be advertisement-focused (having a page/section with your social media links is fine and mentioning that you're, for example, an artist who takes commissions is fine, but the sole purpose of the website should not be advertisement).</li>
+  <li>You must add the webring widget somewhere on either a homepage or a webrings page. If I notice the webring widget is removed, I may remove you from the webring and send you an email to notify you of the issue.</li>
+  <li>I strongly encourage visiting your fellow webring members' pages, leaving comments, and interacting with each other!</li>
   <li>I need to be able to actually read what's on your website in order to add it, so while you don't need to make your website 100% accessible, please do check that things like text contrast are okay and that there's no animations going on that would make the text difficult to read.</li>
   <li>Do not send your application more than once. I am just one person running this webring, and I am often busy with other things. If you haven't been added to the webring yet, it's either because I haven't gotten around to it yet (most likely explanation), or I've decided not to add you to the webring. Sending multiple applications, especially when within less than a month of each other, may result in you not being added to the webring.</li>
 </ul>
@@ -23,24 +23,31 @@ layout: html
 <p>If you have any issues joining or need to contact me for any reason, please feel free to <a href="mailto:punkwasp@protonmail.com">send me an email</a>.</p>
 
 <h2>Add yourself to the members list</h2>
-<p>Add a unique slug, your webpage's name, and your webpage's URL to <a href={{site.github_repo_url}}/blob/main/_data/members.csv>the members list on GitHub</a> in a pull request.<br>
-Pull requests can also be used to change your existing entry or delete your entry.</p>
-
-<details>
-<summary>If you don't have a GitHub account, fill out this form instead (click to expand):</summary>
-<form name=signup method=POST data-netlify=true netlify-honeypot=bot>
-<div hidden><label>Leave this blank unless you're spam <input name=bot></label></div>
-<label>Slug <input name=slug pattern=[0-9a-z](?:-?[0-9a-z])* required></label>
-(ASCII lowercase letters, digits, and hyphen-minuses)<br>
-<label>Name <textarea name=name></textarea></label><br>
-<label>URL <input name=url type=url></label><br>
-<label>E-mail address <input type=email name=email required></label><br>You'll receive an e-mail when your addition/change is made.<br>
-<input type=submit>
+<p>Add a unique slug, your webpage's name, and your webpage's URL to <a href={{site.github_repo_url}}/blob/main/_data/members.csv>the members list on GitHub</a> in a pull request. Pull requests can also be used to change your existing entry or delete your entry.</p>
+<p>If you don't have a GitHub account, fill out this form instead:</p>
+<form action="https://riku.miso.town/submit?user_id=38&label=webring" method="post">
+  <div class="field">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <div class="field">
+    <label for="slug">Slug (ASCII lowercase letters, digits, and hyphen-minuses)</label>
+    <input type="text" name="slug" id="slug" pattern="[0-9a-z](?:-?[0-9a-z])*" required>
+  </div>
+  <div class="field">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+  </div>
+  <div class="field">
+    <label for="url">URL</label>
+    <input type="url" name="url" id="url" required>
+  </div>
+  <input type="submit" value="Submit">
 </form>
-If you're editing your existing entry, make sure to use the same slug. If you're deleting your existing entry, leave the URL field blank.
-</details>
-
+<p>If you're editing your existing entry, make sure to use the same slug. If you're deleting your existing entry, leave the URL field blank.</p>
 <h2>Add links on your webpage</h2>
-<p>Once you're on the members list (not before, it won't work before I've added you and besides, I do reserve the right to reject your application so it'd just be awkward if you added it and I didn't accept you), add the webring widget on your page with this code (replace YOURSLUG with your slug, and preferably upload the button image to your own website rather than hotlinking):<br>
-<textarea>&lt;a href="https://acingtheinternet.netlify.app/YOURSLUG/previous"&gt;back&lt;/a&gt; | &lt;a href="https://acingtheinternet.netlify.app"&gt;&lt;img src="https://punkwasp.neocities.org/images/buttons/asexuals_now.gif" alt="A button saying asexuals now"&gt;&lt;/a&gt; | &lt;a href="https://acingtheinternet.netlify.app/YOURSLUG/next"&gt;next&lt;/a&gt;</textarea><br>
-Check if <a href=https://html.spec.whatwg.org/dev/sections.html#the-aside-element>the <code>&lt;aside&gt;</code> element</a> is right for you.
+<p>Once you're on the members list (not before, it won't work before I've added you and besides, I do reserve the right to reject your application so it'd just be awkward if you added it and I didn't accept you), add the webring widget on your page with this code (replace YOURSLUG with your slug, and preferably upload the button image to your own website rather than hotlinking):</p>
+{% highlight html %}
+<a href="https://acingtheinternet.netlify.app/YOURSLUG/previous">back</a> | <a href="https://acingtheinternet.netlify.app"><img src="https://punkwasp.neocities.org/images/buttons/asexuals_now.gif" alt="A button saying asexuals now"></a> | <a href="https://acingtheinternet.netlify.app/YOURSLUG/next">next</a>
+{% endhighlight %}
+<p>Check if <a href=https://html.spec.whatwg.org/dev/sections.html#the-aside-element>the <code>&lt;aside&gt;</code> element</a> is right for you.</p>
